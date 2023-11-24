@@ -29,18 +29,133 @@ h2, .title-color{
 }
 
 .shop-menu a{
-    padding: 8px 16px;
-    color: #9fb1b8;
-    border: 1px solid #9fb1b8;
+    padding: 5px 8px;
+    color: #78b3cb;
+    border: 1px solid #78b3cb;
     border-radius: 10px;
+    background-color: white
 }
 
 .shop-menu a:hover, .shop-menu .active a{
     color: #fff;
-    background: #0099d1;
+    background: #22404a;
+    width: 150px;
+    height: auto;
 }
 
 
+/********** Narbar icon **********/
+.navbar-search-outline {
+    color: #9fb1b8;
+    border-color: #9fb1b8;
+  }
+
+  .hide{
+    display: none;
+  }
+  .searchShow{
+    display: block;
+    border-color: bisque;
+  }
+
+  .nav-bar-icon img{
+    width: 28px;
+    height: 28px;
+  }
+  /********** Narbar icon **********/
+
+  /********** Narbar sublist hover **********/
+  /* .nav-list-item{
+    margin-right: 10px;
+    display: block;
+    align-items: flex-start;
+    /* border: 2px solid darkseagreen; */
+    /* color: darkseagreen; */
+    /* background-color: rgb(255, 255, 255); */
+    border-bottom: none;
+    
+} */
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    height: 100%;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    
+    
+}
+
+.nav_sublist{
+    display:none;
+    /* display: block; */
+    margin: 0px;    
+    padding: 0px;
+    
+}
+
+.nav_sublist_search:focus { 
+    outline: none !important;
+    border-color: rgb(184, 176, 123);
+    
+ }
+
+.nav_sublist li {
+    margin-top: 20px;
+}
+
+.nav-list:hover{
+    transform: scale(1.07);
+    transition: transform .4s ease-out;
+    cursor: pointer;
+}
+
+
+
+.nav-list:hover .nav_sublist{
+    display: block;
+    list-style: none;
+    width: 100px;
+    height: 150px;
+    /* background-color: crimson; */
+    /* color: black; */
+}
+ 
+.nav_sublist_search{
+    display:none;
+    /* display: block; */
+    margin: 0px;    
+    padding: 0px;
+    border-color: rgb(176, 137, 77);
+}
+
+
+
+/* .nav-list:hover .nav_sublist_search{
+    display: block;
+    list-style: none;
+    
+    /* background-color: crimson; */
+    color: rgb(0, 0, 0);
+} */
+
+.nav-list li{
+    margin-top: 25px;
+    width: 40vw;
+    /* color: black; */
+}
+
+.nav_list-item-style{
+    top: -20px;
+    /* display: block; */
+    margin: 0px;    
+    padding: 0px;
+    
+}
+  /********** Narbar sublist hover **********/
+  
+  
 /********** 產品服務card效果 **********/
 .product-categories a{
     transform: scale(1);
@@ -66,6 +181,12 @@ h2, .title-color{
 }
 
 /********** footer-menu **********/
+.footer-menu img:hover{
+    transform: scale(1.3);
+    transition: transform .4s ease-out;
+    /* box-shadow: 4px 4px 10px #999; */
+    cursor: pointer;
+}
 .footer-menu{
     display: block;
     list-style: none;
@@ -262,9 +383,7 @@ body{
  background-color:rgb(230, 187, 124);
 }
 
-#relation_intro:hover{
- background-color: aqua;
-}
+
 
 .map-display {
  display: flex;
@@ -277,7 +396,7 @@ body{
 }
 
 .nav-bar-fixed{
- overflow: hidden;
+ /* overflow: hidden; */
  background-color: blanchedalmond;
  position: fixed;
  z-index: 2;
@@ -293,5 +412,162 @@ body{
  margin-bottom: 3rem;
 }
 
+/* 小農＆營養師介紹 style start*/
+body {
+    background-color: #fdf1ec;
+  }
+  
+  .wrapper {
+    height: 420px;
+    width: 654px;
+    margin: 50px auto;
+    border-radius: 7px 7px 7px 7px;
+    /* VIA CSS MATIC https://goo.gl/cIbnS */
+    -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+  }
+  
+  .product-img {
+    float: left;
+    height: 420px;
+    width: 327px;
+  }
+  
+  .product-img img {
+    border-radius: 7px 0 0 7px;
+  }
+  
+  .product-info {
+    float: left;
+    height: 420px;
+    width: 327px;
+    border-radius: 0 7px 10px 7px;
+    background-color: #ffffff;
+  }
+  
+  .product-text {
+    height: 300px;
+    width: 327px;
+  }
+  
+  .product-text h1 {
+    margin: 0 0 0 38px;
+    padding-top: 52px;
+    font-size: 34px;
+    color: #474747;
+  }
+  
+  .product-text h1,
+  .product-price-btn p {
+    /* font-family: 'Bentham', serif; */
+  }
+  
+  .product-text h2 {
+    margin: 0 0 47px 38px;
+    font-size: 13px;
+    /* font-family: 'Raleway', sans-serif; */
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #d2d2d2;
+    letter-spacing: 0.2em;
+  }
+  
+  .product-text p {
+    height: 125px;
+    margin: 0 0 0 38px;
+    /* font-family: 'Playfair Display', serif; */
+    color: #8d8d8d;
+    line-height: 1.7em;
+    font-size: 15px;
+    font-weight: lighter;
+    overflow: hidden;
+  }
+  
+  .product-price-btn {
+    height: 103px;
+    width: 327px;
+    margin-top: 17px;
+    position: relative;
+  }
+  
+  .product-price-btn p {
+    display: inline-block;
+    position: absolute;
+    top: -13px;
+    height: 50px;
+    /* font-family: 'Trocchi', serif; */
+    margin: 0 0 0 38px;
+    font-size: 28px;
+    font-weight: lighter;
+    color: #474747;
+  }
+  
+  span {
+    display: inline-block;
+    /* height: 50px; */
+    /* font-family: 'Suranna', serif; */
+    font-size: 34px;
+  }
+  
+  .product-price-btn button {
+    float: right;
+    display: inline-block;
+    height: 50px;
+    width: 176px;
+    margin: 0 40px 0 16px;
+    box-sizing: border-box;
+    border: transparent;
+    border-radius: 60px;
+    /* font-family: 'Raleway', sans-serif; */
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #9cebd5;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .product-price-btn button:hover {
+    background-color: #79b0a1;
+  }
+
+  .product-price-btn img{
+    width: 48px;
+    height: 48px;
+  }
+
+  .info-intro{}
+/* 小農＆營養師介紹 style start*/
+.more-info img {
+    width: 100vw;
+    height: 60%;
+    object-fit: cover;
+    object-position:50% 50%;
+   }
+
+   .more-info{
+    margin: 5px;
+    width: 48%;
+    height: 50vh;
+   }
+
+   .more-info-bt-position{
+    position: relative;
+   }
+
+   .more-info-bt-position button{
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+   }
+
+   .more-info-bt-position button:hover{
+    transform: scale(1.02);
+    box-shadow: 4px 4px 10px #999;
+}
+/* 小農＆營養師介紹 style end*/
 
 /* Gallery end */
