@@ -41,9 +41,9 @@
                     <td>A</td>
                     <td>$180</td>
                     <td>
-                        <button @click="num--">-</button>
+                        <button @click="add('-')">-</button>
                         <div><input type="text" v-model="num"></div>
-                        <button @click="num++">+</button>
+                        <button @click="add('+')">+</button>
                     </td>
                     <td>
                         <div>${{180*num}}</div>
@@ -60,10 +60,24 @@
                     num: 1,
                 }
             },
+            methods: {
+                add(e) {
+
+                    if (e == "-") {
+                        this.num == 0 ? this.num = 0 : this.num--;
+                    } else {
+                        this.num++;
+                    }
+                }
+            },
             computed: {
                 bar_process: {
                     get() {
-                        return (this.num * 180 / 1800) * 100;
+                        if (this.num >= 0) {
+                            return Math.floor((this.num * 180 / 1800) * 100);
+                        } else {
+                            return 0
+                        }
                     },
                 }
             },
