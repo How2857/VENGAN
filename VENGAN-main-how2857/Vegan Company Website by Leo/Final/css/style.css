@@ -406,6 +406,37 @@ img {
     color: #000;
 }
 /* 菜單圖片 */
+/* 購物務車確認頁 */
+#demo {
+    display: flex table-column;
+    justify-content: center;
+
+
+    & table {
+        width: 100%;
+        height: 100%;
+        /* text-align: center; */
+        & th{
+            size: 1rem;
+        }
+        
+        /* & td{
+            height: auto;
+        } */
+        
+        & td:has(button) {
+            /* display: flex; */
+            & .div-img{
+                object-fit: cover;
+                width: 100%;
+            }
+            & div:has(input){
+                width: 100%;
+                
+            }
+        }
+    }
+}
 
 
 
