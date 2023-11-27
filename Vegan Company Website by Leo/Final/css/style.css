@@ -55,7 +55,6 @@ h2, .title-color{
   }
   .searchShow{
     display: block;
-    border-color: bisque;
   }
 
   .nav-bar-icon img{
@@ -407,6 +406,10 @@ body{
 .banners {
  margin-top: 100px;
 }
+
+.story-text-top {
+    margin-top: 150px;
+   }
 
 .mb-3_forCard{
  margin-bottom: 3rem;
