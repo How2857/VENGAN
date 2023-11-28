@@ -108,8 +108,8 @@ h2, .title-color{
     list-style: none;
     width: 100px;
     height: 150px;
-    /* background-color: crimson; */
-    /* color: black; */
+    margin-top: 20px;
+    
 }
  
 .nav_sublist_search{
