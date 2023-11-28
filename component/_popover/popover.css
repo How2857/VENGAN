@@ -1,0 +1,417 @@
+/* 字體 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200&family=Source+Sans+3&display=swap');
+
+/* 動畫 */
+.mber_con-enter-active,
+.mber_con-leave-active {
+    transition: 0.3s ease-out;
+}
+
+.mber_con-enter-from,
+.mber_con-leave-to {
+    opacity: 0;
+    transform: translateX(50px);
+}
+
+.mber_con-enter-to,
+.mber_con-leave-from {
+    opacity: 1;
+}
+
+/* popover CSS */
+.mber_crd {
+    display: flex;
+    width: fit-content;
+    position: fixed;
+    right: 0;
+    top: 50vh;
+    transform: translateY(-50%);
+    align-items: center;
+    user-select: none;
+    font-family: 'Source Sans 3', 'Noto Sans TC', sans-serif;
+
+
+    & * {
+        box-sizing: border-box;
+        z-index: 5;
+    }
+
+    & *::before,
+    & *::after {
+        box-sizing: inherit;
+    }
+
+    & button {
+        padding: 0px;
+        font-family: inherit;
+
+        &:hover {
+            background-color: rgb(237, 242, 247) !important;
+            cursor: pointer;
+        }
+    }
+}
+
+.mber_con {
+    border: 1px solid black;
+    width: 300px;
+    height: 500px;
+    overflow: scroll;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1),
+        1px 1px 20px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* animation: popover_slideToRight 0.3s ease-out 0s 1; */
+
+    & header {
+        /* transition: height 0.3s ease 0s; */
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+}
+
+.mber_con * {
+    margin: 0;
+}
+
+.mber_con::-webkit-scrollbar {
+    display: none;
+}
+
+.mber_clsbtn {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+}
+
+.mber_conHeader {
+    padding: 10px 10px 0 10px;
+}
+
+.mber_conTab {
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+    height: 50px;
+
+    & button[aria-selected="true"] {
+        border-bottom: 3px solid yellowgreen;
+    }
+}
+
+.mber_tabPanels {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+    padding: 10px;
+    overflow: auto;
+
+    & p {
+        font-size: 14px;
+    }
+
+    &>p {
+        display: flex;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 14px;
+    }
+}
+
+.mber_tabPanels::-webkit-scrollbar {
+    display: none;
+}
+
+.mber_reward {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.reward_title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    align-items: center;
+
+    & button {
+        display: inline-flex;
+        gap: 2px;
+        align-items: center;
+        font-size: 12px;
+        border: none;
+        background-color: transparent;
+    }
+
+    & img {
+        width: 12px;
+    }
+}
+
+.reward_icon {
+    height: 36px;
+    min-width: 36px;
+    background-color: rgb(252, 250, 247);
+    border-radius: 6px;
+    display: inline-flex;
+    justify-content: center;
+
+    & img {
+        width: 22px;
+    }
+}
+
+.reward_body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+
+}
+
+.reward_body img {
+    width: 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reward_list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.reward {
+    width: 100%;
+    display: flex;
+    padding: 4px 0;
+    gap: 12px;
+}
+
+.mber_conTab button {
+    padding: 10px 0;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    border-color: transparent;
+    background-color: transparent;
+    border-bottom: 2px solid gray;
+    width: 50%;
+}
+
+.mber_btn {
+    writing-mode: vertical-lr;
+    height: fit-content;
+    background-color: yellowgreen;
+    border-radius: 10px 0 0 10px;
+    font-size: 12px;
+    padding: 0 0 6px 0;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.1),
+        1px 1px 20px 0px rgba(0, 0, 0, 0.05);
+}
+
+.mber_btn:hover {
+    cursor: pointer;
+}
+
+.mber_btn img {
+    width: 48px;
+}
+
+.mber_vip {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    gap: 16px;
+
+    & hr {
+        width: 100%;
+    }
+
+    .vip_title {
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .vip_list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .vip {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        column-gap: 12px;
+        align-items: center;
+        justify-content: center;
+
+        .vip_icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background-color: rgb(252, 250, 247);
+            border-radius: 6px;
+
+            & img {
+                width: 36px;
+                height: 36px;
+            }
+        }
+
+        .vip_body {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            gap: 8px;
+
+            & div:first-child {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                width: 100%;
+            }
+
+            & div:nth-child(2) {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                height: 24px;
+                border-radius: 4px;
+
+                & button {
+                    background-color: transparent;
+                    border: none;
+                    width: fit-content;
+                    width: 24px;
+                    height: 24px;
+
+                    & img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mber_share {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 12px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+
+    .share_title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .share_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        .share {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+
+            .share_head p {
+                font-size: 14px;
+            }
+
+            .share_body {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 12px;
+
+                & span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 36px;
+                    height: 36px;
+                    background-color: rgb(252, 250, 247);
+                    border-radius: 6px;
+
+                    & img {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+
+                & p {
+                    font-size: 16px;
+                }
+
+            }
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    border-top: 1px solid rgb(236, 236, 236);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & div {
+        width: 100%;
+    }
+
+    .footer_login button {
+        width: 100%;
+        border-radius: 6px;
+        font-size: 14px;
+        padding: 10px 0px;
+        background-color: yellowgreen;
+    }
+
+    .footer_register {
+        display: flex;
+        flex-direction: row-reverse;
+
+        & a {
+            width: fit-content;
+            text-decoration: none;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+    }
+}
