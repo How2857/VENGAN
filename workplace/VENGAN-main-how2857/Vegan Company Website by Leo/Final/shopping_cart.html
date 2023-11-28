@@ -8,9 +8,12 @@
     <!-- CSS文件載入 -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!-- js文件載入 -->
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+        crossorigin="anonymous"></script>
     <!-- VUE引入 -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
@@ -61,100 +64,120 @@
 
             <!-- 購物達成度 開始 -->
             <div class=" mt-5" id="demo" style="height: 100%;">
-                <div class="progress" style="height: 20%;">
-                    <div class="progress-bar" :style="{width:bar_process+'%'}">{{bar_process>=80 ? '恭喜':bar_process}}
+                <div class="progress" style="height: 50px; border-radius: 75px;">
+                    <div class="progress-bar" :style="{width:bar_process+'%'}">
+                        {{bar_process>=80 ? bar_process>=80 ? '恭喜10%折扣' : '恭喜5%折扣' : '老闆在買點' }}
                     </div>
                 </div>
+                <!-- {{bar_process>=80 ? '恭喜':bar_process}} -->
 
 
-                <div class="container">
-                    <table>
-                        <tr>
-                            <th style="width: 40%;">商品</th>
-                            <th>單價</th>
-                            <th style="text-align: center;">數量</th>
-                            <th style="text-align: center;">小計</th>
-                        </tr>
-                    </table>
-                    <hr>
-                    <div class="container">
-                        <table>
-                            <tr class="container">
-                                <td style="width: 40%;"><img src="./images/menu/food4.jpg" style="border-radius: 75px;"
-                                        alt=""></td>
-                                <td>$180</td>
-                                <td>
-                                    <div style="display: flex;justify-content:center">
-                                        <button @click="add('-')">-</button>
-
-
-                                        <input type="text" v-model="num" style="width: 30px;">
-
-
-                                        <button @click="add('+')">+</button>
-                                    </div>
-                                </td>
-                                <td style="text-align: center;">$180</td>
-                            </tr>
-                        </table>
+                <div class="container mt-3">
+                    <div class="container m-5">
+                        <div class="row align-items-center mt-3">
+                            <div class="col-4 " style="text-align: center;">
+                                <h2>菜品</h2>
+                            </div>
+                            <div class="col-2">
+                                <h2>單價</h2>
+                            </div>
+                            <div class="col-2">
+                                <h2>數量</h2>
+                            </div>
+                            <div class="col-2">
+                                <h2>備註</h2>
+                            </div>
+                            <div class="col-2" style="text-align: center;">
+                                <h2>總計</h2>
+                            </div>
+                        </div>
                         <hr>
+
+                        <div class="row align-items-center mt-3">
+                            <div class="col-4">
+                                <img src="./images/menu/food4.jpg" alt="" style="border-radius: 75px; display: inline;">
+                                <h3 style="margin: 10px; ; display: inline;">名稱</h3>
+                            </div>
+                            <div class="col-2">
+                                <P>$180</P>
+                            </div>
+                            <div class="col-2">
+                                <button class="shopping_cart-button" @click="add('-')">-</button>
+
+
+                                <input type="text" v-model="num" style="width: 30px;">
+
+
+                                <button class="shopping_cart-button" @click="add('+')">+</button>
+                            </div>
+                            <div class="col-2">
+                                <input v-model="text" style="width: 100%;" placeholder="備註" aria-label="備註">
+                            </div>
+                            <div class="col-2" style="text-align: center;">
+                                <p>${{bar_process}}</p>
+                            </div>
+                        </div>
+                        <hr>
+
+
+
+
                     </div>
-
-
-
                 </div>
-            </div>
 
-            <script>
-                const vw = Vue.createApp({
-                    data() {
-                        return {
-                            num: 1,
-                        }
-                    },
-                    methods: {
-                        add(e) {
-
-                            if (e == "-") {
-                                this.num == 0 ? this.num = 0 : this.num--;
-                            } else {
-                                this.num++;
+                <script>
+                    const vw = Vue.createApp({
+                        data() {
+                            return {
+                                num: 1,
                             }
-                        }
-                    },
-                    computed: {
-                        bar_process: {
-                            get() {
-                                if (this.num >= 0) {
-                                    return Math.floor((this.num * 180 / 1800) * 100);
+                        },
+                        methods: {
+                            add(e) {
+
+                                if (e == "-") {
+                                    this.num == 0 ? this.num = 0 : this.num--;
                                 } else {
-                                    return 0
+                                    this.num++;
                                 }
-                            },
-                        }
-                    },
-                }).mount("#demo")
-            </script>
-            <!-- 購物達成度 結束 -->
-            <!-- 留言 開始 -->
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque corporis obcaecati veritatis
-                            at sequi repellat totam voluptate, illum dolore accusantium labore praesentium, qui unde non
-                            ratione sint molestias expedita numquam.</P>
-                        <input v-model="text" style="width: 100%;" placeholder="口味需求" aria-label="口味需求">
-                    </div>
-                    <div class="col">
-                        <button style="width: 100%;height: 30%;">
-                            優惠卷使用
-                        </button>
-                        <hr>
-                        <input v-model="text" style="width: 100%;height: 30%;" placeholder=XXXX-XXXX aria-label="優惠卷"
-                            oninput="value=value.replace(/[^\d]/g,'')" maxlength="8">
-                        <div style="display: flex; justify-content:space-between"><span
-                                style="text-align: left;">總金額</span><span style="text-align: right;">$180</span></div>
-                        <!--輸入框限制 
+                            }
+                        },
+                        computed: {
+                            bar_process: {
+                                get() {
+                                    if (this.num >= 0) {
+                                        return Math.floor(this.num * 10);
+                                    } else {
+                                        return 0
+                                    }
+                                },
+                            }
+                        },
+                    }).mount("#demo")
+                </script>
+                <!-- 購物達成度 結束 -->
+                <!-- 留言 開始 -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque corporis obcaecati
+                                veritatis
+                                at sequi repellat totam voluptate, illum dolore accusantium labore praesentium, qui unde
+                                non
+                                ratione sint molestias expedita numquam.</P>
+                            <input v-model="text" style="width: 100%;" placeholder="口味需求" aria-label="口味需求">
+                        </div>
+                        <div class="col">
+                            <button class="shopping_cart-button" style="width: 100%;height: 30%; ">
+                                優惠卷使用
+                            </button>
+                            <hr>
+                            <input v-model="text" style="width: 100%;height: 30%;" placeholder=XXXX-XXXX
+                                aria-label="優惠卷" oninput="value=value.replace(/[^\d]/g,'')" maxlength="8">
+                            <div style="display: flex; justify-content:space-between"><span
+                                    style="text-align: left;">總金額</span><span style="text-align: right;">$180</span>
+                            </div>
+                            <!--輸入框限制 
                     οnkeyup="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" οnpaste="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" oncontextmenu = "value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')"
                     
                     <script>
@@ -184,64 +207,75 @@
 
                 </script> -->
 
+                        </div>
                     </div>
                 </div>
-            </div>
 
 
-            <!-- 留言 結束 -->
-            <div class="container"style="text-align:right;">
-                <h2>加入會員</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe distinctio aliquam consectetur in, quaerat, nihil molestiae dolore vel veniam, labore alias consequatur quis necessitatibus architecto exercitationem asperiores? Fugiat, ratione harum.</p>
-                <button class="icart-pg-checkout-btn icart-button-radius icartCheckoutBtn" style="width: 40%; ">結帳</button>
-            </div>
-            <div class="container mt-5">
-                <div class="container text-center">
-                    <h2>米食類</h2>
+                <!-- 留言 結束 -->
+                <div class="container" style="text-align:right; margin-top: 20px;">
+                    <h2>加入會員</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe distinctio aliquam consectetur
+                        in,
+                        quaerat, nihil molestiae dolore vel veniam, labore alias consequatur quis necessitatibus
+                        architecto
+                        exercitationem asperiores? Fugiat, ratione harum.</p>
+                    <button class="shopping_cart-button" style="width: 40%; "><a href="./Payment_cart.html">加入購物車</a></button>
                 </div>
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5 product-categories">
-                    <a href="shop.html" class="card bdr">
-                        <div class="product-catalog" style="height: 300px;">
-                            <img src="./images/card_Images/card_V1.jpg" class="card-img-top" style="height: 100%;"
-                                alt="米麵食">
-                        </div>
-                        <div class="card-body bg-porduct-cl">
-                            <h4 class="mb-0 text-white text-center">米食類</h4>
-                        </div>
+                <hr>
+                <div class="container">
 
-                    </a>
-                    <a href="shop.html" class="card bdr">
-                        <div class="product-catalog" style="height: 300px;">
-                            <img src="./images/card_Images/card_V1.jpg" class="card-img-top" style="height: 100%;"
-                                alt="米麵食">
+                    <div class="container mt-5">
+                        <div class="row text-center m-2">
+                            <h2>為您推薦菜品</h2>
                         </div>
-                        <div class="card-body bg-porduct-cl">
-                            <h4 class="mb-0 text-white text-center">米食類</h4>
-                        </div>
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+                            <div class="col">
+                                <a href="" class="">
+                                    <div class="div-img product-categories1 ">
+                                        <img src="./images/menu/food1.jpg" class="card-img-topimg-fluid" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <button class="menu-button">Card title2</button>
+                                    </div>
+                                </a>
+                            </div>
 
-                    </a>
-                    <a href="shop.html" class="card bdr">
-                        <div class="product-catalog" style="height: 300px;">
-                            <img src="./images/card_Images/card_V1.jpg" class="card-img-top" style="height: 100%;"
-                                alt="米麵食">
+                            <div class="col">
+                                <a href="" class="">
+                                    <div class="div-img product-categories1 ">
+                                        <img src="./images/menu/food2.jpg" class="card-img-topimg-fluid" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <button class="menu-button product-categories1">Card title2</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="" class="">
+                                    <div class="div-img product-categories1 ">
+                                        <img src="./images/menu/food3.jpg" class="card-img-topimg-fluid" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <button class="menu-button product-categories1">Card title2</button>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="" class="">
+                                    <div class="div-img product-categories1 ">
+                                        <img src="./images/menu/food4.jpg" class="card-img-topimg-fluid" alt="...">
+                                    </div>
+                                    <div class="card-body">
+                                        <button class="menu-button product-categories1">Card title2</button>
+                                    </div>
+                                </a>
+                            </div>
                         </div>
-                        <div class="card-body bg-porduct-cl">
-                            <h4 class="mb-0 text-white text-center">米食類</h4>
-                        </div>
+                    </div>
 
-                    </a>
-                    <a href="shop.html" class="card bdr">
-                        <div class="product-catalog" style="height: 300px;">
-                            <img src="./images/card_Images/card_V1.jpg" class="card-img-top" style="height: 100%;"
-                                alt="米麵食">
-                        </div>
-                        <div class="card-body bg-porduct-cl">
-                            <h4 class="mb-0 text-white text-center">米食類</h4>
-                        </div>
 
-                    </a>
                 </div>
-            </div>
         </section>
 
 

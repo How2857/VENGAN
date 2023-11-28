@@ -1,5 +1,6 @@
 /* 載入Google字型 */
-@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@200&family=Source+Sans+3&display=swap');
 
 /********** 基礎樣式 **********/
 html {
@@ -8,8 +9,15 @@ html {
 }
 
 body {
-    font-family: 'Noto Sans TC', sans-serif;
+
+    font-size: 16Ppx;
+    box-sizing: border-box  ;
+    font-size: 16px;
+    font-family: 'Source Sans 3', 'Noto Sans TC', sans-serif;
     color: #2b2b2b;
+    & button {
+        font-family: inherit;
+    }
 }
 
 a,
@@ -385,6 +393,30 @@ img {
 
 /* menu 的輪播圖 */
 /* 菜單圖片 */
+h2{
+    
+    color: #000;
+}
+.product-categories1 {
+    transform: scale(1);
+    transition: transform .4s ease-out;
+}
+
+.product-categories1 :hover {
+    transform: scale(1.02);
+    box-shadow: 4px 4px 10px #999;
+}
+
+.intro_relation1:hover {
+    transform: scale(1.02);
+    transition: transform .4s ease-out;
+    box-shadow: 4px 4px 10px #999;
+    cursor: pointer;
+}
+.div-a{
+    width: 100%;
+    height: 100%;
+}
 .div-img{
     height: 300px;
     
@@ -401,12 +433,53 @@ img {
 }
 
 
-.menu-title{
+.menu-button{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    /* text-align: center; */
+    border-radius: 75px;
+    border-style: inset;
+    border:0px;
+    /* border-color: rgb(176, 137, 77); */
     background: blanchedalmond;
-    color: #000;
+    color: #212529 0.5; 
+}
+.menu-button:hover{
+    border-radius: 75px;
+    border-style: inset;
+    border:0px;
+    transform: scale(1.02);
+    box-shadow: 4px 4px 10px #999;
+    /* border-color: blanchedalmond; */
+    background: rgb(192, 157, 105);
+    color: #212529 0.5;
 }
 /* 菜單圖片 */
 /* 購物務車確認頁 */
+.shopping_cart-button{
+    margin-top: 20px;
+    /* text-align: center; */
+    border-radius: 5px;
+    border-style: inset;
+    border:0px;
+    /* border-color: rgb(176, 137, 77); */
+    background: blanchedalmond;
+    color: #000 0.5; 
+}
+.shopping_cart-button:hover{
+    border-radius: 5px;
+    border-style: inset;
+    border:0px;
+    transform: scale(1.02);
+    box-shadow: 4px 4px 10px #999;
+    /* border-color: blanchedalmond; */
+    background: rgb(192, 157, 105);
+    color: #000 0.5;
+}
+p{
+    font-size: 1.2rem;
+}
 #demo {
     display: flex table-column;
     justify-content: center;
