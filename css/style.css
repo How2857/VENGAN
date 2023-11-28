@@ -1,34 +1,44 @@
 /* 載入Google字型 */
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
 /********** 基礎樣式 **********/
-html{
+html {
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     font-family: 'Noto Sans TC', sans-serif;
     color: #2b2b2b;
 }
-a, a:active, a:hover,a:link,a:visited{
+
+a,
+a:active,
+a:hover,
+a:link,
+a:visited {
     text-decoration: none;
     outline: none;
     color: #2b2b2b;
 }
-a:hover{
+
+a:hover {
     color: #999;
 }
-h2, .title-color{
+
+h2,
+.title-color {
     color: #9fb1b8;
 }
 
 /********** logo **********/
 @media screen and (max-width:768px) {
-    .navbar-brand img{
+    .navbar-brand img {
         width: 60px;
     }
 }
 
-.shop-menu a{
+.shop-menu a {
     padding: 5px 8px;
     color: #78b3cb;
     border: 1px solid #78b3cb;
@@ -36,7 +46,8 @@ h2, .title-color{
     background-color: white
 }
 
-.shop-menu a:hover, .shop-menu .active a{
+.shop-menu a:hover,
+.shop-menu .active a {
     color: #fff;
     background: #22404a;
     width: 150px;
@@ -48,54 +59,56 @@ h2, .title-color{
 .navbar-search-outline {
     color: #9fb1b8;
     border-color: #9fb1b8;
-  }
+}
 
-  .hide{
+.hide {
     display: none;
-  }
-  .searchShow{
-    display: block;
-  }
+}
 
-  .nav-bar-icon img{
+.searchShow {
+    display: block;
+}
+
+.nav-bar-icon img {
     width: 28px;
     height: 28px;
-  }
-  /********** Narbar icon **********/
+}
 
-  /********** Narbar sublist hover **********/
+/********** Narbar icon **********/
+
+/********** Narbar sublist hover **********/
 
 
-.nav-list{
+.nav-list {
     list-style: none;
     display: flex;
     height: 100%;
     margin-top: 0px;
     margin-bottom: 0px;
     padding: 0px;
-    
-    
+
+
 }
 
-.nav_sublist{
-    display:none;
+.nav_sublist {
+    display: none;
     /* display: block; */
-    margin: 0px;    
+    margin: 0px;
     padding: 0px;
-    
+
 }
 
-.nav_sublist_search:focus { 
+.nav_sublist_search:focus {
     outline: none !important;
     border-color: rgb(184, 176, 123);
-    
- }
+
+}
 
 .nav_sublist li {
     margin-top: 20px;
 }
 
-.nav-list:hover{
+.nav-list:hover {
     transform: scale(1.07);
     transition: transform .4s ease-out;
     cursor: pointer;
@@ -103,19 +116,19 @@ h2, .title-color{
 
 
 
-.nav-list:hover .nav_sublist{
+.nav-list:hover .nav_sublist {
     display: block;
     list-style: none;
     width: 100px;
     height: 150px;
     margin-top: 20px;
-    
+
 }
- 
-.nav_sublist_search{
-    display:none;
+
+.nav_sublist_search {
+    display: none;
     /* display: block; */
-    margin: 0px;    
+    margin: 0px;
     padding: 0px;
     border-color: rgb(176, 137, 77);
 }
@@ -123,34 +136,35 @@ h2, .title-color{
 
 
 
-.nav-list li{
+.nav-list li {
     margin-top: 25px;
     width: 40vw;
     /* color: black; */
 }
 
-.nav_list-item-style{
+.nav_list-item-style {
     top: -20px;
     /* display: block; */
-    margin: 0px;    
+    margin: 0px;
     padding: 0px;
-    
+
 }
-  /********** Narbar sublist hover **********/
-  
-  
+
+/********** Narbar sublist hover **********/
+
+
 /********** 產品服務card效果 **********/
-.product-categories a{
+.product-categories a {
     transform: scale(1);
     transition: transform .4s ease-out;
 }
 
-.product-categories a:hover{
+.product-categories a:hover {
     transform: scale(1.02);
     box-shadow: 4px 4px 10px #999;
 }
 
-.intro_relation:hover{
+.intro_relation:hover {
     transform: scale(1.02);
     transition: transform .4s ease-out;
     box-shadow: 4px 4px 10px #999;
@@ -158,53 +172,58 @@ h2, .title-color{
 }
 
 /********** google map **********/
-.map{
+.map {
     width: 100%;
     height: 300px;
 }
 
 /********** footer-menu **********/
-.footer-menu img:hover{
+.footer-menu img:hover {
     transform: scale(1.3);
     transition: transform .4s ease-out;
     /* box-shadow: 4px 4px 10px #999; */
     cursor: pointer;
 }
-.footer-menu{
+
+.footer-menu {
     display: block;
     list-style: none;
     padding: 0;
     margin: 0;
 }
-.footer-menu > li{
+
+.footer-menu>li {
     display: inline-block;
     margin-right: 1rem;
 }
-.footer-menu > li > a{
+
+.footer-menu>li>a {
     color: #fff;
     padding: 1rem 0;
 }
-.footer-menu > li > a:hover{
+
+.footer-menu>li>a:hover {
     color: #999;
 }
 
 @media screen and (max-width: 768px) {
-    .send-btn{
+    .send-btn {
         width: 100%;
     }
 }
+
 /********** 頁面高度 **********/
-.page-content{
+.page-content {
     min-height: 700px;
 }
 
 /********** 購物車清單 **********/
-.sidebar-product-list{
+.sidebar-product-list {
     padding-top: 1rem;
     border-bottom: 1px solid #e9e9e9;
 }
 
-.sidebar-product-img{
+.sidebar-product-img {
     width: 50px;
     height: 50px;
     margin: .2rem;
@@ -212,12 +231,12 @@ h2, .title-color{
     border: 1px solid #0099d1;
 }
 
-.sidebar-product-list:hover .sidebar-product-img{
+.sidebar-product-list:hover .sidebar-product-img {
     opacity: .5;
 }
 
 /********** 購物清單移除商品按鈕 **********/
-.remove{
+.remove {
     display: inline-block;
     width: 20px;
     height: 20px;
@@ -227,54 +246,64 @@ h2, .title-color{
     border-radius: 50%;
     cursor: pointer;
 }
-.remove:hover{
-    background: rgb(172,2,2);
+
+.remove:hover {
+    background: rgb(172, 2, 2);
 }
 
 /********** 商品分類 **********/
-.sidebar-product-category{
+.sidebar-product-category {
     display: block;
     margin: 0;
     padding: 0;
     list-style: none;
 }
-.sidebar-product-category > li{
+
+.sidebar-product-category>li {
     display: block;
     padding: .5rem 0;
     border-bottom: 1px solid #e9e9e9;
 }
-.sidebar-product-category > li > a{
+
+.sidebar-product-category>li>a {
     color: rgb(43, 43, 43);
 }
-.sidebar-product-category > li > a:hover{
+
+.sidebar-product-category>li>a:hover {
     color: #999;
 }
 
 
 /********** 購物車 **********/
-.product-remove{
+.product-remove {
     width: 5%;
 }
-.product-thumbnail{
+
+.product-thumbnail {
     width: 15%;
 }
-.product-name{
+
+.product-name {
     width: 35%;
 }
-.product-price, .product-quantity, .product-subtotal{
+
+.product-price,
+.product-quantity,
+.product-subtotal {
     width: 15%;
 }
 
-.product-quantity input{
-    width: 50%;   
+.product-quantity input {
+    width: 50%;
 }
 
-@media screen and (max-width:768px){
-    .product-thumbnail{
+@media screen and (max-width:768px) {
+    .product-thumbnail {
         display: none;
-    } 
-    .product-quantity input{
-        width: 100%;   
+    }
+
+    .product-quantity input {
+        width: 100%;
     }
 }
 
@@ -296,7 +325,7 @@ body{
     background: #e9e9e9;
 } */
 
-.gallery{
+.gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1vh;
@@ -306,7 +335,7 @@ body{
     padding: 1vh;
 }
 
- .gallery > img{
+.gallery>img {
     width: 100%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -319,88 +348,89 @@ body{
     filter: grayscale(70%);
 }
 
-.img_logo{
+.img_logo {
     width: 80px !important;
     height: 80px;
 }
 
 .carousel-item img {
- width: 100vw;
- height: 50vh;
- object-fit: cover;
- object-position: 50% 50%;
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .product-catalog {
- width: 100%;
- height: 500px;
+    width: 100%;
+    height: 500px;
 }
 
 .product-catalog img {
- width: 100%;
- height: 100%;
- object-fit: cover;
- object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .bdr {
- border-radius: 30px;
- overflow: hidden;
+    border-radius: 30px;
+    overflow: hidden;
 }
 
 .col-md-4 {
- width: 300px;
- height: 300px;
+    width: 300px;
+    height: 300px;
 
 }
 
-.container-fluid{
+.container-fluid {
     height: 100px;
- background-color:blanchedalmond;
+    background-color: blanchedalmond;
 }
 
-.bg-relationship-cl{
- background-color:blanchedalmond;
+.bg-relationship-cl {
+    background-color: blanchedalmond;
 }
 
-.bg-porduct-cl{
- background-color:rgb(230, 187, 124);
+.bg-porduct-cl {
+    background-color: rgb(230, 187, 124);
 }
 
 
 
 .map-display {
- display: flex;
- margin-right: 10px;
+    display: flex;
+    margin-right: 10px;
 }
 
-.footer-menu img{
- width: 30px;   
- height: 30px;
+.footer-menu img {
+    width: 30px;
+    height: 30px;
 }
 
-.nav-bar-fixed{
- /* overflow: hidden; */
- background-color: blanchedalmond;
- position: fixed;
- z-index: 2;
- top: 0;
- width: 100%;
+.nav-bar-fixed {
+    /* overflow: hidden; */
+    background-color: blanchedalmond;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    width: 100%;
 }
 
 .banners {
- margin-top: 100px;
+    margin-top: 100px;
 }
 
 .story-text-top {
     margin-top: 150px;
-   }
-
-.mb-3_forCard{
- margin-bottom: 3rem;
 }
-h1{
-    margin-top: 100px;  
+
+.mb-3_forCard {
+    margin-bottom: 3rem;
+}
+
+h1 {
+    margin-top: 100px;
     padding: 20px 37px;
     text-align: center;
 }
@@ -409,9 +439,9 @@ h1{
 /* 小農＆營養師介紹 style start*/
 body {
     background-color: #fdf1ec;
-  }
-  
-  .wrapper {
+}
+
+.wrapper {
     height: 420px;
     width: 654px;
     margin: 50px auto;
@@ -420,42 +450,42 @@ body {
     -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
-  }
-  
-  .product-img {
+}
+
+.product-img {
     float: left;
     height: 420px;
     width: 327px;
-  }
-  
-  .product-img img {
+}
+
+.product-img img {
     border-radius: 7px 0 0 7px;
-  }
-  
-  .product-info {
+}
+
+.product-info {
     float: left;
     height: 420px;
     width: 327px;
     border-radius: 0 7px 10px 7px;
     background-color: #ffffff;
-  }
-  
-  .product-text {
+}
+
+.product-text {
     height: 300px;
     width: 327px;
-  }
-  
-  .product-text h1 {
+}
+
+.product-text h1 {
     margin: 0 0 0 38px;
     padding-top: 52px;
     font-size: 34px;
     color: #474747;
-  }
-  
-  .product-text h1,
-  
-  
-  .product-text h2 {
+}
+
+.product-text h1,
+
+
+.product-text h2 {
     margin: 0 0 47px 38px;
     font-size: 13px;
     /* font-family: 'Raleway', sans-serif; */
@@ -463,9 +493,9 @@ body {
     text-transform: uppercase;
     color: #d2d2d2;
     letter-spacing: 0.2em;
-  }
-  
-  .product-text p {
+}
+
+.product-text p {
     height: 125px;
     margin: 0 0 0 38px;
     /* font-family: 'Playfair Display', serif; */
@@ -474,16 +504,16 @@ body {
     font-size: 15px;
     font-weight: lighter;
     overflow: hidden;
-  }
-  
-  .product-price-btn {
+}
+
+.product-price-btn {
     height: 103px;
     width: 327px;
     margin-top: 17px;
     position: relative;
-  }
-  
-  .product-price-btn p {
+}
+
+.product-price-btn p {
     display: inline-block;
     position: absolute;
     top: -13px;
@@ -493,16 +523,16 @@ body {
     font-size: 28px;
     font-weight: lighter;
     color: #474747;
-  }
-  
-  span {
+}
+
+span {
     display: inline-block;
     /* height: 50px; */
     /* font-family: 'Suranna', serif; */
     font-size: 34px;
-  }
-  
-  .product-price-btn button {
+}
+
+.product-price-btn button {
 
     display: inline-block;
     height: 50px;
@@ -520,46 +550,47 @@ body {
     background-color: #9cebd5;
     cursor: pointer;
     outline: none;
-  }
-  
-  .product-price-btn button:hover {
-    background-color: #79b0a1;
-  }
+}
 
-  .product-price-btn img{
+.product-price-btn button:hover {
+    background-color: #79b0a1;
+}
+
+.product-price-btn img {
     width: 48px;
     height: 48px;
-  }
+}
 
 
 /* 小農＆營養師介紹 style start*/
 .more-info img {
-    width: 100vw;
+    width: 50vw;
     height: 60%;
     object-fit: cover;
-    object-position:50% 50%;
-   }
+    object-position: 50% 50%;
+}
 
-   .more-info{
+.more-info {
     margin: 5px;
     width: 48%;
     height: 50vh;
-   }
+}
 
-   .more-info-bt-position{
+.more-info-bt-position {
     position: relative;
-   }
+}
 
-   .more-info-bt-position button{
+.more-info-bt-position button {
     position: absolute;
     right: 5px;
     bottom: 5px;
-   }
+}
 
-   .more-info-bt-position button:hover{
+.more-info-bt-position button:hover {
     transform: scale(1.02);
     box-shadow: 4px 4px 10px #999;
 }
+
 /* 小農＆營養師介紹 style end*/
 
 /* Gallery end */
