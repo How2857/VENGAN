@@ -453,9 +453,7 @@ body {
   }
   
   .product-text h1,
-  .product-price-btn p {
-    /* font-family: 'Bentham', serif; */
-  }
+  
   
   .product-text h2 {
     margin: 0 0 47px 38px;
@@ -505,7 +503,7 @@ body {
   }
   
   .product-price-btn button {
-    float: right;
+
     display: inline-block;
     height: 50px;
     width: 176px;
@@ -533,7 +531,7 @@ body {
     height: 48px;
   }
 
-  .info-intro{}
+
 /* 小農＆營養師介紹 style start*/
 .more-info img {
     width: 100vw;
